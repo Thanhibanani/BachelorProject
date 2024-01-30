@@ -1,5 +1,6 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    font-family: 'Squada One', sans-serif; /*Det er denne som brukes i designet. */
 }
 
 @media (min-width: 768px) {
@@ -9,10 +10,17 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+    font-family: 'Squada One', sans-serif; /*Det er denne som brukes i designet. */
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: rgb(196,25,190);
+    background: radial-gradient(circle, rgba(196,25,190,1) 0%, rgba(38,40,221,1) 100%);
 }
+
+
+
