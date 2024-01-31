@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Project.Models;
 
 namespace Project.Data
 {
@@ -9,5 +10,7 @@ namespace Project.Data
             : base(options)
         {
         }
+        public DbSet<Image> Images { get; set; }
     }
+    
 }
