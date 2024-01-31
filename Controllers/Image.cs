@@ -50,7 +50,7 @@ namespace Project.Controllers
         // GET: Image/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["UserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id");
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace Project.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", image.UserId);
+            ViewData["UserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id", image.UserId);
             return View(image);
         }
 
@@ -84,7 +84,7 @@ namespace Project.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", image.UserId);
+            ViewData["UserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id", image.UserId);
             return View(image);
         }
 
@@ -120,7 +120,7 @@ namespace Project.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", image.UserId);
+            ViewData["UserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id", image.UserId);
             return View(image);
         }
 

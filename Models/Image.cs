@@ -15,7 +15,8 @@ namespace Project.Models
         public string ImageUrl { get; set; }
 
         //The foreign-key link between Image and ApplicationUser. 
-        //One-to-Many relationship. 
+        //One-to-Many relationship.
+       
         public string UserId { get; set; }
 
 
