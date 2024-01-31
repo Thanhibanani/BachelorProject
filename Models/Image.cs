@@ -8,7 +8,7 @@ namespace Project.Models
         [Key]
         public string Id { get; set; }
 
-        [MaxLength(255)]
+        
         public string Description { get; set; }
 
         //This must be Required, but for now let's set it like this. 

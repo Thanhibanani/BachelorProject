@@ -13,8 +13,8 @@ namespace Project.Controllers
     public class Image : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public string Id { get; private set; }
+        private readonly string Id;
+        private readonly object UserId;
 
         public Image(ApplicationDbContext context)
         {
