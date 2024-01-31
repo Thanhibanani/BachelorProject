@@ -226,7 +226,6 @@ namespace Project.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(255)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ImageUrl")
@@ -252,6 +251,10 @@ namespace Project.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Lastname")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");

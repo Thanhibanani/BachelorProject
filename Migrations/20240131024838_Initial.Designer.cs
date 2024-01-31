@@ -11,7 +11,7 @@ using Project.Data;
 namespace Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240131022507_Initial")]
+    [Migration("20240131024838_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -228,7 +228,6 @@ namespace Project.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(255)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ImageUrl")
@@ -254,6 +253,10 @@ namespace Project.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Lastname")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
