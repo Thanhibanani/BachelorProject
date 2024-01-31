@@ -11,6 +11,7 @@ namespace Project.Data
         {
         }
         public DbSet<Image> Images { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
     }
     
 }
